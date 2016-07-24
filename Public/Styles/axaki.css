@@ -1,0 +1,123 @@
+
+
+/* line 54, ../../../app/stylesheets/_globals.sass */
+.cf {
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 0px;
+  clear: both;
+}
+.footer-fixed {
+    position: fixed;
+    bottom: 0px;
+}
+/* line 262, ../../../app/stylesheets/_globals.sass */
+#footer {
+  background: #222 url("../images0/bg-footer.jpg") no-repeat top center;
+  width: 100%;
+  height: 50px;
+  padding-top: 7px;
+  /* Plagio do bootstrap */
+  margin-top: 20px;
+  border-radius: 4px;
+  /* 
+  position:absolute; position relative absolute tem o body como referencia (neste caso) */
+  /* bottom:0px; o roda pé sempre fica colado no final do body (por que o body é referencia)*/
+}
+
+/* line 268, ../../../app/stylesheets/_globals.sass */
+#footer-in {
+  width: 961px;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+/* line 273, ../../../app/stylesheets/_globals.sass */
+.footer-links {
+  float: left;
+  font-size: 12px;
+  color: #828282;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 277, ../../../app/stylesheets/_globals.sass */
+.footer-links li {
+  float: left;
+  padding: 1px 20px 2px 0;
+}
+/* line 280, ../../../app/stylesheets/_globals.sass 
+  text-transform: uppercase;
+  
+  */
+.footer-links li a {
+  font-size: 13px;
+  line-height: 15px;
+  color: #959595;
+  text-shadow: 0 -1px 1px #0e0e0e;
+  font-weight: bold;
+  *filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=22, Strength=2);
+  *zoom: 1;
+}
+/* line 289, ../../../app/stylesheets/_globals.sass */
+.footer-links li a:hover {
+  color: #f7f6f6;
+}
+
+/*list_view_item*/
+.info-price {
+	text-align: right;
+	color: #390;
+	letter-spacing: -0.3px;
+}
+.price-info-cost {
+    color: #900;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list-view-item {
+	
+	/*
+	border: 1px solid  rgba(104,33,122,.1);
+	*/
+}
+.axaki-view-item {
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+    margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+	border-left-color: #ec971f ;
+	box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+.margin-item {
+	margin: 0;
+}
+.page-header-axaki {
+	color: #F65314 ;
+	letter-spacing:-1px;
+}
+
+/*Layout*/
+body {
+	
+}
+.container{
+}
+.btn-succes {
+	background-color: #84DE02;
+	border: 1px solid  rgba(104,33,122,.1);
+}
+
+/*view_item*/
+.t-axaki {
+	color: #F65314;
+	text-shadow: 0px 2px 2px rgba(0,0,0,.5); 
+	letter-spacing:1px;
+}

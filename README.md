@@ -1,5 +1,4 @@
-# Axaki
-Desafio-apis3
+# Desafio-apis3
 
 O nosso desafio é criar uma simples aplicação web e “comitar” no GitHub.
 

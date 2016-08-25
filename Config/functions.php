@@ -5,7 +5,7 @@ function actionController($controle, $metodo) {
 			actionMethodHome($metodo);
 			break;
 		case "User":
-			actionMethodAccount($metodo);
+			actionMethodUser($metodo);
 			break;
 		case "Merc":
 			actionMethodMerchandise($metodo);
@@ -15,9 +15,21 @@ function actionController($controle, $metodo) {
 	}
 }
 
+function vd($var) { //Alternativa para o var_dump
+	echo '<hr><pre>';
+	print_r($var);
+	echo '</pre><hr>';
+}
+
 function actionMethodHome($metodo) {
 	require_once("Controller/HomeController.php");
-	$page = new HomeController();
+	require_once('Model/MerchandiseModel.php');
+	
+	//Declaração da dependencia
+	$molde = new MerchandiseModel();
+	//Injetando a dependecia
+	$page = new HomeController($molde);
+	
 	switch ($metodo) {
 		case "Index":
 			$page->index();
@@ -33,15 +45,24 @@ function actionMethodHome($metodo) {
 	}
 }
 
-function actionMethodAccount($metodo) {
+function actionMethodUser($metodo) {
 	require_once("Controller/UserController.php");
-	$page = new UserController();
+	require_once('Model/UserModel.php');
+	
+	//Declaração da dependencia
+	$molde = new UserModel();
+	//Injetando a dependecia
+	$page = new UserController($molde);
+	
 	switch ($metodo) {
+		case "Home":
+			$page->home();
+			break;
 		case "Login":
 			$page->login();
 			break;
-		case "checkLogin":
-			$page->checkLogin();
+		case "Auth":
+			$page->auth();
 			break;
 		case "Logout":
 			$page->logout();
@@ -49,7 +70,7 @@ function actionMethodAccount($metodo) {
 		case "Cadastro":
 			$page->signup();
 			break;
-		case "newUser":
+		case "New":
 			$page->newUser();
 			break;
 		default:
@@ -59,13 +80,19 @@ function actionMethodAccount($metodo) {
 
 function actionMethodMerchandise($metodo) {
 	require_once("Controller/MerchandiseController.php");
-	$page = new MerchandiseController();
+	require_once './Model/MerchandiseModel.php';
+	
+	//Declaração da dependencia
+	$molde = new MerchandiseModel();
+	//Injetando a dependecia
+	$page = new MerchandiseController($molde);
+	
 	switch ($metodo) {
 		case "Incluir":
 			$page->incluir();
 			break;
 		case "NovaMercadoria":
-			$page->novaMercadoria();
+			$page->addItem();
 			break;
 		case "TodasMercadoria":
 			$page->todasMercadoria();

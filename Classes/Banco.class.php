@@ -179,6 +179,7 @@ abstract class Banco {
 		if($sql != null) {
 			$query =  mysqli_query($this->conexao, $sql) or $this->trataErro(__FILE__, __FUNCTION__);
 			$this->linhasAfetadas = mysqli_affected_rows($this->conexao);
+			
 			if(substr(trim(strtolower($sql)), 0, 6)=="select") {
 				$this->dataSet = $query;
 				return $query;
@@ -212,11 +213,11 @@ abstract class Banco {
 		if($numErro == null)  $numErro = mysqli_connect_errno() . PHP_EOL;
 		if($msgErro == null)  $msgErro = mysqli_connect_error() . PHP_EOL;
 		
-		$resultado = 'Erro: <br>
-			<strong>Arquivo: <strong>'.$arquivo.'<br>
-			<strong>Rotina: <strong>'.$rotina.'<br>
-			<strong>Codigo: <strong>'.$numErro.'<br>
-			<strong>Mensagem: <strong>'.$msgErro.'<br>';
+		$resultado = '<strong>trataErro():</strong> <br>
+			<strong>Arquivo: </strong>'.$arquivo.'<br>
+			<strong>Rotina: </strong>'.$rotina.'<br>
+			<strong>Codigo: </strong>'.$numErro.'<br>
+			<strong>Mensagem: </strong>'.$msgErro.'<br>';
 			
 		if($geraExcept == false)
 			echo($resultado);

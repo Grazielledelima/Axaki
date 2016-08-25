@@ -14,7 +14,7 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="?url=Home/Index">Home</a></li>
 						<li><a href="?url=Merc/Incluir">Vender</a></li>
-						<li><a href="#">'-'</a></li>
+						<!-- <li><a href="#">'-'</a></li> -->
 					</ul>
 					<?php
 						if(isset($_SESSION['email']))

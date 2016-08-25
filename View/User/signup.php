@@ -34,7 +34,7 @@ body {
 			 			</div>
 			 			<div class="panel-body">
 						<!-- form open -->
-			    		<form id="formCad" action="?url=User/newUser" method="post" onsubmit="">
+			    		<form id="formCad" action="?url=User/New" method="post" onsubmit="">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">

@@ -14,7 +14,7 @@
 }
 /* line 262, ../../../app/stylesheets/_globals.sass */
 #footer {
-  background: #222 url("../images0/bg-footer.jpg") no-repeat top center;
+  background: #222;/* url("../images0/bg-footer.jpg") no-repeat top center;*/
   width: 100%;
   height: 50px;
   padding-top: 7px;
@@ -28,7 +28,7 @@
 
 /* line 268, ../../../app/stylesheets/_globals.sass */
 #footer-in {
-  width: 961px;
+  width: auto;
   margin: 0 auto;
   padding-left: 10px;
 }

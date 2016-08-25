@@ -33,12 +33,11 @@ body {
 	margin: -150px 0 0 -150px;
 	width:300px;
 	height:300px;
-	z-index: -1;
 }
 .login2 h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
 
-.novoAqui { 
-left: 50%;
+.novoAqui {
+	left: 50%;
 	color: #fff; 
 	text-shadow: 0 0 10px rgba(0,0,0,0.3);
 	float: right !important;
@@ -62,6 +61,7 @@ input {
 	-o-transition: box-shadow .5s ease;
 	-ms-transition: box-shadow .5s ease;
 	transition: box-shadow .5s ease;
+	
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
@@ -72,7 +72,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 -->
 <div class="login2">
 	<h1>Login</h1>
-    <form method="post" action="?url=User/checkLogin">
+    <form method="post" action="?url=User/Auth">
     	<input type="text" name="user" placeholder="Email" required="required" />
         <input type="password" name="pw" placeholder="Senha" required="required" />
         <button type="submit" class="btn2 btn-primary2 btn-block2 btn-large2">Entrar</button>

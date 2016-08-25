@@ -1,5 +1,4 @@
 <?php
-
 ?>
 		</div> 
 		<!-- fim do conteúdo -->
@@ -23,6 +22,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
-		<script src="/public/scripts/bootstrap.min.js"></script>
+		<script src="<?php echo $js['bootstrap']; ?>"></script>
 	</body>
 </html>

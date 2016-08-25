@@ -18,7 +18,7 @@
 		<div class="row axaki-view-item" >
 			<div class="col-sm-2" >
 				<a href="?url=Merc/View&item=<?php echo $element['codigo'];?>" class="thumbnail margin-item">
-					<img class="" src="public/images/<?php echo $element['codigo'];?>.jpg" alt="Imagem da mercadoria" width="100%" height="100%">
+					<img class="" src="Public/Images/<?php echo $element['codigo'];?>.jpg" alt="Imagem da mercadoria" width="100%" height="100%">
 				</a>
 			</div>
 			

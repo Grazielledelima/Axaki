@@ -1,11 +1,15 @@
-<?php
+<?php //HomeController.php
 require_once 'Controller.php';
 require_once './Model/MerchandiseModel.php';
 
 class HomeController extends Controller {
 	protected $conteudo;
 	protected $dados;
+	protected $model;
 	
+	public function __construct(MerchandiseModel $model=null) {
+		$this->model = $model;
+	}
 	//Home/Index
 	public function index(){
 		//Definindo o titulo
@@ -19,9 +23,8 @@ class HomeController extends Controller {
 		];
 		
 		//Pegando informções no banco de dados
-		$mercadoria = new Mercadoria();
-		$mercadoria->selecionaTudo($mercadoria);
-		while ($linha = $mercadoria->retornaDados("assoc")){
+		$this->model->list_view_item($this->model);
+		while ($linha = $this->model->retornaDados("assoc")){
 			$this->dados[] = $linha;
 		}
 		

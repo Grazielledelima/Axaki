@@ -1,6 +1,5 @@
-<?php
-//abstract 
-class Controller {
+<?php //Controller.php
+abstract class Controller {
 	protected $title;
 
 	public function render($container = null){
@@ -23,4 +22,3 @@ class Controller {
 		require_once(PATH_FOOTER);
 	}
 }
-?>

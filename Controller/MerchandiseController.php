@@ -1,12 +1,16 @@
-<?php
+<?php //MerchandiseController.php
 require_once 'Controller.php';
-require_once './Model/MerchandiseModel.php';
 
-//MerchandiseController
 class MerchandiseController extends Controller {
 	protected $title;
 	protected $conteudo;
 	protected $dados;
+	
+    protected $model;
+	
+	public function __construct(MerchandiseModel $model) {
+		$this->model = $model;
+	}
 	
 	public function incluir(){
 		$this->title = "Vender Mercadoria";
@@ -15,42 +19,21 @@ class MerchandiseController extends Controller {
 		$this->render($this->conteudo);
 	}
 	
-	public function novaMercadoria() {
-		//Tipo e conteudo do Objeto
-		$mercadoria = new Mercadoria(array(
-			"nome" => $_POST['fnome'],
-			"tipo" => $_POST['ftipo'],
-			"quantidade" => $_POST['fquantidade'],
-			"preco" => $_POST['fpreco'],
-			"negocio" => 'VENDA'
-		));
+	public function addItem() {
+		if(!isset($_SESSION['id'])) header("location:/?url=User/Login");
 		
-		//Executa o INSERT do objeto
-		$mercadoria->inserir($mercadoria);
+		$this->model->addItem($this->model);
 		
 		//Redirecionamento
-		header("location:/?url=Home/Index");
-	}
-	
-	public function todasMercadoria() {
-		$mercadoria = new Mercadoria();
-		$mercadoria->selecionaTudo($mercadoria);
-		
-		while ($linha = $mercadoria->retornaDados("assoc")){
-			$result[] = $linha;
-		}
-		//$mercadoria->retornaDados()
+		//header("location:/?url=Home/Index");
 	}
 	
 	public function viewItem() {
 		//Se Merc/View receber um $_GET['item']
 		if (isset($_GET['item']) && !empty($_GET['item'])) {
 			
-			//Model/MerchandiseModel
-			$mercadoria = new Mercadoria();
-			$mercadoria->extras_select = " WHERE ". $mercadoria->campo_pk ."=".$_GET['item'];
-			$mercadoria->selecionaTudo($mercadoria);
-			$this->dados = $mercadoria->retornaDados();
+			//Acionando o molde
+			$this->dados = $this->model->viewItem($this->model);
 			
 			//Define um titulo para pagina
 			$this->title = $this->dados->nome;
@@ -61,5 +44,6 @@ class MerchandiseController extends Controller {
 		}else
 			$this->notFound();
 	}
+	
 }
 ?>

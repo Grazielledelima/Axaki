@@ -1,35 +1,46 @@
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
 <h1>Vender Mercadoria</h1>
 
 <form id="sell_form" method="post" action="?url=Merc/NovaMercadoria" >
+	<div class="form-group">
+		<label for="nMerc">Nome da Mercadoria</label>
+		<input type="text" class="form-control"  id="nMerc" name="fnome" placeholder="..."/>
+	</div>
 	
-		<label>Nome da Mercadoria:</label><br>
-		<input id="nMerc" class="form-control" type="text" name="fnome" placeholder="..."/><br>
-		
-		<label>Tipo da Mercadoria:</label><br>
-		<input id="tMerc" class="form-control" type="text" name="ftipo" placeholder="..."/><br>
-		
-		<label>Quantidade:</label><br>
-		<input id="qnt" class="form-control" type="text" name="fquantidade" placeholder="..."/><br>
-		
-		<label>Valor:</label><br>
+	<div class="form-group">
+		<label for="tMerc">Tipo da Mercadoria</label>
+		<input id="tMerc" class="form-control" id="tMerc" name="ftipo" placeholder="..."/>
+	</div>
+	
+	<div class="form-group">
+		<label for="qnt">Quantidade</label>
+		<input type="text" class="form-control" id="qnt" name="fquantidade" placeholder="..."/>
+	</div>
+	
+	<div class="form-group">
+		<label for="valor">Valor</label>
 		<div class="input-group">
 			<span class="input-group-addon">R$</span>
-			<input id="valor" class="form-control" type="text" name="fpreco" aria-label="Amount (to the nearest dollar)" placeholder="Ex: 1.99">
+			<input type="text" class="form-control" id="valor" name="fpreco" aria-label="Amount (to the nearest dollar)" placeholder="Ex: 1.99">
 		</div>
-		
-	<!-- <label>Tipo do Negócio(Compra ou Venda):</label><br>
-	<input type="text" name="tipo"/><br><br>
-	<textarea rows="10" name="name"></textarea><br> -->
-	<br>
-	<a href="index.php"><button type="button" class="btn btn-danger ">Cancelar</button></a>
+	</div>
+	
+	<div class="form-group">
+		<label for="imgInputFile">Imagem do produto</label>
+		<input type="file" id="imgInputFile">
+		<p class="help-block">Exemplo img.jpg ou img.png</p>
+	</div>
+	
+	<div class="form-group">
+		<label for="description">Descrição do Produto:</label>
+		<textarea class="form-control" rows="5" id="description" name="fdescription"></textarea>
+	</div>
+	
+	<a href="?url=Home/Index">
+		<button type="button" class="btn btn-danger ">Cancelar</button>
+	</a>
 	<button id="anuciar" class="btn btn-primary pull-right" type="submit" >Anunciar</button>
 </form>
-<br>
-<div id="focus-count">TesteManual.campos_correto() </div>
+<div id="focus-count">:v</div>
 
 <script>
 	var campos_correto = 0;

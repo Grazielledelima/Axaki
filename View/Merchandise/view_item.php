@@ -108,7 +108,7 @@ ul li.a-breadcrumb-divider {
 	<!-- img -->
 	<div class="col-sm-6">
 		<a href="#" class="thumbnail">
-			<img class="" src="public/images/<?php echo $this->dados->codigo; ?>.jpg" alt="Imagem da mercadoria">
+			<img class="" src="Public/Images/<?php echo $this->dados->codigo; ?>.jpg" alt="Imagem da mercadoria">
 		</a>
 	</div>
 	<!-- buyBox -->
@@ -153,6 +153,7 @@ ul li.a-breadcrumb-divider {
 		</div>
 	</div>
 </div></div>
+<!-- propaganda de outros produtos --
 <div class="row">
 	<div class="col-sm-12">
 		<div class="conteudo">
@@ -178,40 +179,6 @@ ul li.a-breadcrumb-divider {
 <div class="row">
 	<div class="col-sm-12"><div class="conteudo">
 		<h2 class="page-header-axaki">DESCRIÇÃO DA MERCADORIA</h2><hr>
-<b>17 botões MMO otimizados</b><br>
-Acesse sem esforço mais habilidades e macros do que nunca com 17 botões de mouse incluindo a revolucionária grade em miniatura do Razer Naga. O software do driver da Edição especial do Razer Naga Molten (ou Maelstrom ) permite que você organize facilmente suas combinações de teclas e habilidades de personagens para qualquer jogo permitindo que você remapeie totalmente e designe macros a todos os 17 botões.
-<br><br>
-
-<b>Máximo de conforto para longas sessões de jogos</b><br>
-Jogue por horas com o formato ergonômico da Edição especial do Razer Naga Molten, otimizada para conforto e fácil acesso a cada botão.
-<br><br>
-
-<b>Complementos personalizados de interface para jogos MMO</b><br>
-<br>Organize suas habilidades e elimine o excesso visual com os complementos personalizados de interface em jogo da Edição especial do Razer Naga Molten ou suporte integrado para jogo para os jogos mais populares MMO.<br>
-<br><br>
-
-<pre>
-<b>ESPECIFICAÇÕES TÉCNICAS</b><br>
-17 botões otimizados MMO totalmente programáveis (incluindo grade de miniaturas com 12 botões)
-Sensor de 5600 dpi Razer Precision 3.5G Laser
-Ultrapolling de 1.000 HZ/tempo de resposta de 1 ms
-Pés Zero-acoustic Ultraslick
-Razer Synapse 2.0
-Perfis ilimitados de personagens com complementos
-Complementos de software opcionais específicos para MMO
-Tamanho aproximado: 116 mm / 4.57” (Comprimento) x 70 mm / 2.76” (Largura) x 46 mm / 1.81” (Altura)
-Peso aproximado: 134 g / 0.30 lbs
-</pre>
-
-<pre>
-<b>Requisitos do sistema</b><br>
-PC ou Mac com porta USB
-Windows® 7 / Windows Vista® / Windows® XP / Mac (OS X or higher)
-Conexão de Internet (para instalação de driver)
-Pelo menos 35MB de espaço livre em disco rígido
-Razer Synapse 2.0 registration (requiring a valid e-mail), software download, license acceptance, and internet connection needed to activate full features of product and for software updates. After activation, full features are available in optional offline mode.
-</pre>
-<br><br>
-
+		<?php echo $this->dados->description; ?>
 	</div>
 </div></div>

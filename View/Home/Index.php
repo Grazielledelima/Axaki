@@ -8,17 +8,17 @@
 		<div class="item active">
 			<img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" 
 			alt="First slide [1140x500]" 
-			src="/public/images/01.jpg" data-holder-rendered="true">
+			src="<?php echo APP_PATH; ?>Public/Images/01.jpg" data-holder-rendered="true">
 		</div>
 		<div class="item">
 			<img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" 
 			alt="Second slide [1140x500]" 
-			src="/public/images/02.jpg" data-holder-rendered="true">
+			src="<?php echo APP_PATH; ?>Public/Images/02.jpg" data-holder-rendered="true">
 		</div>
 		<div class="item">
 			<img data-src="holder.js/1140x500/auto/#555:#333/text:Third slide" 
 			alt="Third slide [1140x500]" 
-			src="/public/images/03.jpg" data-holder-rendered="true">
+			src="<?php echo APP_PATH; ?>Public/Images/03.jpg" data-holder-rendered="true">
 		</div>
 	</div>
 	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

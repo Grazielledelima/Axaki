@@ -5,7 +5,7 @@
 								<?php echo $_SESSION['first_name'] ?>
 							</a>
 							<ul class="dropdown-menu" >
-								<li><a href="#">Minha conta</a></li>
+								<li><a href="?url=User/Home">Minha conta</a></li>
 								<li><a href="#">Vendas</a></li>
 								<li><a href="#">Compras</a></li>
 								<li role="separator" class="divider"></li>
